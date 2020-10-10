@@ -14,11 +14,17 @@ import Contact from './components/Contact';
 import Courses from './components/Courses';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const App = () => {
+
+  // [cart, setCart] = useState(0);
+  
+
+
   return (
     <Router>
-    
+
       <Navbar />
 
       <Switch>
@@ -42,7 +48,9 @@ const App = () => {
         </Redirect>
       </Switch>
 
-  </Router>
+      <Footer />
+
+    </Router>
   );
 }
 
