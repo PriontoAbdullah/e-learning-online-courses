@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = (props) => {
 	return (
 		<div className="container-fluid nav_bg">
 			<div className="row">
@@ -41,7 +41,7 @@ const Navbar = () => {
 									</li>
 									<li className="nav-item">
 										<NavLink className="nav-link" to="/cart" activeClassName="menu_active">
-											Cart
+											Cart <span className="text-light bg-dark p-1 cart-span">{props.cart.length}</span>
 										</NavLink>
 									</li>
 									<li className="nav-item">

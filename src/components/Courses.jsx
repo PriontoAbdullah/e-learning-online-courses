@@ -25,7 +25,7 @@ const Courses = (props) => {
                                                 <span className="card-text mr-4"><FontAwesomeIcon icon={faUsers} /> {courses.enroll_students} students enrolled</span>
                                                 <span className="card-text ml-5 lead"><FontAwesomeIcon icon={faDollarSign} /> {courses.price}</span>
                                             </div>
-                                            <button onClick={ () => props.addToCart()} className="btn btn-primary mt-3"><FontAwesomeIcon icon={faCartArrowDown} /> Buy Course</button>
+                                            <button onClick={() => props.addToCart(courses)} className="btn btn-primary mt-3"><FontAwesomeIcon icon={faCartArrowDown} /> Buy Course</button>
                                         </div>
                                     </div>
                                 </div>

@@ -113,3 +113,7 @@
     transform: translateY(-10px);
   }
 }
+
+.cart-span {
+  border-radius: 10px;
+}

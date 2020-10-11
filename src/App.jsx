@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
 import {
@@ -18,14 +18,17 @@ import Footer from './components/Footer';
 
 const App = () => {
 
-  // [cart, setCart] = useState(0);
-  
+  const [cart, setCart] = useState([]);
 
+  const addToCart = (courses) => {
+    const newCart = [...cart, courses];
+    setCart(newCart);
+  }
 
   return (
     <Router>
 
-      <Navbar />
+      <Navbar cart={cart}/>
 
       <Switch>
         <Route exact path="/about">
@@ -35,10 +38,10 @@ const App = () => {
           <Contact />
         </Route>
         <Route exact path="/courses">
-          <Courses />
+          <Courses addToCart={addToCart}/>
         </Route>
         <Route exact path="/cart">
-          <Cart />
+          <Cart cart={cart}/>
         </Route>
         <Route exact path="/">
           <Home />
