@@ -49,6 +49,11 @@ const Navbar = (props) => {
 											Contact
 										</NavLink>
 									</li>
+									<li className="nav-item">
+										<NavLink className="nav-link" to="/signin" activeClassName="menu_active">
+											Sign in
+										</NavLink>
+									</li>
 								</ul>
 							</div>
 						</div>

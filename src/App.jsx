@@ -15,6 +15,7 @@ import Courses from './components/Courses';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import SignIn from './components/SignIn';
 
 const App = () => {
 
@@ -42,6 +43,9 @@ const App = () => {
         </Route>
         <Route exact path="/cart">
           <Cart cart={cart}/>
+        </Route>
+        <Route exact path="/signin">
+          <SignIn />
         </Route>
         <Route exact path="/">
           <Home />
