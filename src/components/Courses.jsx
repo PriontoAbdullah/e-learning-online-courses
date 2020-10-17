@@ -14,9 +14,9 @@ const Courses = (props) => {
                     <div className="col-10 mx-auto">
                         <div className="row gy-4">
                             {fakeData.map(courses =>
-                                <div className="col-md-4 col-10 mx-auto">
+                                <div className="col-md-4 col-10 mx-auto" key={courses.id}>
                                     <div className="card">
-                                        <img src={courses.image} class="card-img-top" alt="Course" />
+                                        <img src={courses.image} className="card-img-top" alt="Course" />
                                         <div className="card-body">
                                             <h5 className="card-title">{courses.Course_name}</h5>
                                             <p className="card-text lead"><FontAwesomeIcon icon={faUser} /> {courses.course_instructor}</p>
